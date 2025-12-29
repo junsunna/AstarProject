@@ -155,7 +155,7 @@ void AStar::UpdatePathFinding()
         if (!_allowDiagonal && i >= 4) continue;
         if (i >= 4)
         {
-            if (!IsWalkable(current->x, nextY) || !IsWalkable(nextX, current->y))
+            if (!IsWalkable(current->x, nextY) && !IsWalkable(nextX, current->y))
                 continue;
         }
 
